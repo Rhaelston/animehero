@@ -30,7 +30,7 @@ export function Card (props: AnimeResponseData  ) {
         <Text style={{color:"#FA58B6", fontSize:15}}>
             {props.attributes.titles.en_jp}
         </Text>
-        <Image source={{uri:props.attributes.posterImage.tiny}}   style={{
+        <Image source={{uri:props.attributes.posterImage.tiny}} style={{
             width: props.attributes.posterImage.meta.dimensions.tiny.width,
             height: props.attributes.posterImage.meta.dimensions.tiny.height,
             borderRadius: 4

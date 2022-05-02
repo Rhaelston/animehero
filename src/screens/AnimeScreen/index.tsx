@@ -29,7 +29,7 @@ export function Anime ({ route }: RouteProps) {
     }, []);
 
     return(
-        <Container>
+        <Container >
             <TitleEn>
                 {route.params.NameEn}
             </TitleEn>
@@ -39,22 +39,23 @@ export function Anime ({ route }: RouteProps) {
             <Age style={{borderBottomWidth:1, borderBottomColor: '#270082'}}>
                 {route.params.Age}
             </Age>
-            <Image source={{uri:route.params.img}}  style={{
+            <Image source={{uri:route.params.img}} style={{
             width: route.params.meta.width,
             height:route.params.meta.height,
             borderRadius:20,
-            margin: 45,
+            alignSelf: "center"
             }
            }/>
            <About style={{borderBottomWidth:1, borderBottomColor: '#270082'}}>
-                <Text style={{fontWeight:"bold", fontSize: 17, color:"#FA58B6", width:100}}>About:  </Text>
+                <Text style={{fontWeight:"bold", fontSize: 17, color:"#FA58B6"}}>About:  </Text>
                 {route.params.About} 
            </About>
            <YoutubePlayer
-            height={300}
+            height={240}
             play={playing}
             videoId={route.params.Video}
             onChangeState={onStateChange}
+            webViewStyle={ {opacity:0.99} }
             />
         </Container>
     )

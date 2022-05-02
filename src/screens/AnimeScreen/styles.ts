@@ -2,8 +2,6 @@ import styled from "styled-components/native";
 
 export const Container = styled.ScrollView`
 background-color: #1A1A40;
-width: 100%;
-height: 100%;
 `
 
 export const TitleEn = styled.Text`

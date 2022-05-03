@@ -27,7 +27,7 @@ export function Card (props: AnimeResponseData  ) {
 
     return(
         <Container  onPress={()=>{selectedAnime()}}>
-        <Text style={{color:"#FA58B6", fontSize:15}}>
+        <Text style={{color:"#FA58B6", fontSize:18}}>
             {props.attributes.titles.en_jp}
         </Text>
         <Image source={{uri:props.attributes.posterImage.tiny}} style={{

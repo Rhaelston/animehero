@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-import { Container, Content, Items, Menu, OpenClose } from "./styles";
+import { Container, Content, Items, Menu } from "./styles";
 import {Modal, Pressable, Image, TouchableOpacity,  } from "react-native";
-import { MenuIcon } from '../../assets/menu-icon.png'
-import {CloseTag} from '../../assets/close-tag.png'
 
 
 
 export function Nav () {
     const [modalVisible, setModalVisible] = useState(false);
+
+    var CloseIcon = require ('../../assets/close_icon.png');
+    var MenuIcon = require ('../../assets/menu_icon.png');
 
     return (
         <Menu>
@@ -22,9 +23,9 @@ export function Nav () {
                 <Container>
                     <Pressable
                         onPress={() => setModalVisible(!modalVisible)}
-                        style={{alignSelf:"flex-end", marginRight:10, marginTop:20 }}
+                        style={{alignSelf:"flex-end", marginRight:15, marginTop:10 }}
                     >
-                        <OpenClose>Close</OpenClose>
+                        <Image source={CloseIcon} style={{width:40, height:40, }}/>
                     </Pressable>
                     <Content>
 
@@ -34,15 +35,14 @@ export function Nav () {
                         <TouchableOpacity><Items>Your Library</Items></TouchableOpacity>
                         <TouchableOpacity><Items>Login</Items></TouchableOpacity>
                     
-                        <Image source={{uri:CloseTag}} style={{width:10}}/>
                     </Content>
                 </Container>
             </Modal>
             {!modalVisible && <Pressable 
                 onPress={() => setModalVisible(!modalVisible)}
-                style={{alignSelf:"flex-end", marginRight:10, marginTop:10}}
+                style={{alignSelf:"flex-end", marginRight:15, marginTop:10}}
             >
-                <OpenClose>Options</OpenClose>
+                <Image source={MenuIcon} style ={{ height: 40, width: 40,}}/>
             </Pressable>}
         </Menu>
     )

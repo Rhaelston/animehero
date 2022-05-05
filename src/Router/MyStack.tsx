@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { Anime } from "../screens/AnimeScreen";
 import Home from "../screens/Home";
 import { ShowAll } from "../screens/ShowAll";
-import { Nav } from "../components/Header";
+import { Header } from "../components/Header";
 
 
 
@@ -17,17 +17,17 @@ const MyStack: React.FC = () => (
     <Stack.Screen name="Anime Hero" component={Home}
       options={{headerStyle:{backgroundColor: '#270082',},headerTintColor: '#fff',headerTitleStyle: {
       fontWeight: 'bold', fontSize: 20,
-    }, headerRight:()=><Nav/>}}/>
+    }, headerRight:()=><Header/>}}/>
 
     <Stack.Screen name="Anime" component={Anime}
       options={{headerStyle:{backgroundColor: '#270082',},headerTintColor: '#fff',headerTitleStyle: {
       fontWeight: 'bold', fontSize: 20,
-    }, headerRight:()=><Nav/>}}/>
+    }, headerRight:()=><Header/>}}/>
 
     <Stack.Screen name="ShowAll" component={ShowAll}
       options={{headerStyle:{backgroundColor: '#270082',},headerTintColor: '#fff',headerTitleStyle: {
       fontWeight: 'bold', fontSize: 20,
-    }, headerRight:()=><Nav/>}}/>
+    }, headerRight:()=><Header/>}}/>
 
   </Stack.Navigator>
 </NavigationContainer>

@@ -4,7 +4,7 @@ import {Modal, Pressable, Image, TouchableOpacity,  } from "react-native";
 
 
 
-export function Nav () {
+export function Header () {
     const [modalVisible, setModalVisible] = useState(false);
 
     var CloseIcon = require ('../../assets/close_icon.png');

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Card } from "../AnimeCard"
+import { Card } from "../Card"
 import api from "../../service/api"
 import { Container, LoadMore } from "./styles"
 import { useNavigation } from "@react-navigation/native"
